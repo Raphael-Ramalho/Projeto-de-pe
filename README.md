@@ -14,3 +14,9 @@ Este projeto tem a finalizadade prover visibilidade ao Projeto de Pé. Para visu
     
     yarn start
 
+# Construido com:
+<li>Typescript
+<li>ReactJs
+<li>Ant Design
+<li>Styled Components
+<li>Firebase
