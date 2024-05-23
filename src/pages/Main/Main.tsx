@@ -11,7 +11,7 @@ import { useRef } from "react";
 import { Contact } from "components/Contact/Contact";
 
 export const Main = () => {
-  const mainRef = useRef<HTMLDivElement | null>(null);
+  const mainRef = useRef<HTMLDivElement>(null);
 
   return (
     <Container ref={mainRef}>
