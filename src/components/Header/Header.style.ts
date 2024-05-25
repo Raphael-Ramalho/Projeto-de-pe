@@ -114,16 +114,6 @@ export const HeartIcon = styled(HeartFilled)`
   fill: ${colors.primary};
 `;
 
-export const DownloadIcon = styled(DownloadOutlined)`
-  fill: black;
-`;
-
-export const StyledLink = styled.a`
-  margin-left: ${spaces.sp};
-  color: black;
-  margin-top: ${spaces.mp};
-`;
-
 export const ButtonsContainer = styled.div`
   display: flex;
 `;

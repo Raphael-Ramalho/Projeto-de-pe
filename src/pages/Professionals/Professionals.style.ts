@@ -11,8 +11,9 @@ export const Container = styled.div`
   width: 90rem;
   margin-right: auto;
   margin-left: auto;
+
   @media (max-width: ${breakPoints.mobile}) {
-    width: calc(100% - 4rem);
+    width: 100%;
   }
 `;
 
@@ -31,8 +32,12 @@ export const BoxArea = styled.div`
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
+
   @media (max-width: ${breakPoints.mobile}) {
     flex-direction: column;
+    align-items: center;
+    width: 92%;
+    flex-wrap: initial;
   }
 `;
 

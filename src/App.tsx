@@ -1,6 +1,6 @@
 import Footer from "components/Footer/Footer";
 import { Header } from "components/Header/Header";
-import { Professionals } from "components/Professionals/Professionals";
+import { Professionals } from "pages/Professionals/Professionals";
 import { Whatsapp } from "components/Whatsapp/Whatsapp";
 import { RoutePaths } from "enums/RoutePaths";
 import { About } from "pages/About/About";

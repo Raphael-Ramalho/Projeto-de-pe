@@ -4,11 +4,9 @@ import { useEffect, useState } from "react";
 
 import { RoutePaths } from "enums/RoutePaths";
 import {
-  DownloadIcon,
   HeaderContainer,
   Navigation,
   StyledLabel,
-  StyledLink,
   StyledOption,
   Title,
 } from "./Header.style";
@@ -24,6 +22,9 @@ export const Header = () => {
       case RoutePaths.ABOUT:
         setCurrentTab("about");
         break;
+      case RoutePaths.PROFESSIONALS:
+        setCurrentTab("contact");
+        break;
       case RoutePaths.DONATIONS:
         setCurrentTab("donation");
         break;
@@ -31,14 +32,21 @@ export const Header = () => {
         setCurrentTab("home");
         break;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [location.pathname]);
 
   const onClick: MenuProps["onClick"] = (e) => {
     setCurrentTab(e.key);
   };
 
   const items = [
+    {
+      label: (
+        <StyledOption to={RoutePaths.HOME} onClick={() => setOpen(false)}>
+          Início
+        </StyledOption>
+      ),
+      key: "home",
+    },
     {
       label: (
         <StyledOption to={RoutePaths.ABOUT} onClick={() => setOpen(false)}>
@@ -68,27 +76,15 @@ export const Header = () => {
     },
     {
       label: (
-        <StyledLabel onClick={() => setOpen(false)}>
+        <StyledLabel
+          onClick={() =>
+            window.open(require("assets/files/estatuto-de-pe.pdf"))
+          }
+        >
           Prestação de contas
         </StyledLabel>
       ),
       key: "transparency",
-      children: [
-        {
-          type: "group",
-          label: (
-            <>
-              <DownloadIcon />
-              <StyledLink
-                href={require("assets/files/estatuto-de-pe.pdf")}
-                download={"Estatuto De Pé"}
-              >
-                Baixar estatuto
-              </StyledLink>
-            </>
-          ),
-        },
-      ],
     },
   ];
 
@@ -101,18 +97,9 @@ export const Header = () => {
     <HeaderContainer>
       <Menu open={open} setOpen={setOpen}>
         <>
-          {
-            <StyledOption to={RoutePaths.HOME} onClick={() => setOpen(false)}>
-              Pagina inicial
-            </StyledOption>
-          }
-          {items.map((item, index) =>
-            index + 1 !== items.length ? (
-              <div key={item.key}>{item.label}</div>
-            ) : (
-              <div key={item.key}></div>
-            )
-          )}
+          {items.map((item) => {
+            return <div key={item.key}>{item.label}</div>;
+          })}
         </>
       </Menu>
       <Title to={RoutePaths.HOME} onClick={handleTitleClick}>

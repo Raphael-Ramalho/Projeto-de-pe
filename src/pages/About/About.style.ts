@@ -14,6 +14,5 @@ export const Container = styled.div`
 
   @media (max-width: ${breakPoints.tablet}) {
     width: calc(100% - ${spaces.sp});
-    padding: ${spaces.none} ${spaces.none} ${spaces.none} ${spaces.sp};
   }
 `;
