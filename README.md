@@ -6,6 +6,8 @@ Este projeto tem a finalizadade prover visibilidade ao Projeto de Pé. Para visu
 
 # Como executar localmente:
 
+<li>Certifique-se de estar utilizando o node na versão 20.16.0
+
 <li>Instale as dependências:
     
     yarn install
