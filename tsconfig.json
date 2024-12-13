@@ -22,7 +22,10 @@
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "react": ["./node_modules/@types/react"]
+    }
   },
   "include": ["src", "src/declaration.d.ts"]
 }

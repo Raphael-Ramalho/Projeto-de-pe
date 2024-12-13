@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 export interface FooterContent {
   title: string;
   content: {
-    image?: JSX.Element;
+    image?: ReactNode;
     textCombination?: {
       initiator: string;
       text: string;

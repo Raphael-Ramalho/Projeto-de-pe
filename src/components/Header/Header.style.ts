@@ -1,5 +1,5 @@
 import { Button, Menu } from "antd";
-import { HeartFilled, DownloadOutlined } from "@ant-design/icons/lib/icons";
+import { HeartFilled } from "@ant-design/icons/lib/icons";
 import styled from "styled-components";
 import Theme from "theme/Theme";
 import { Link } from "react-router-dom";
